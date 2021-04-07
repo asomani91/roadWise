@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/roadWise"
@@ -11,124 +10,132 @@ const userSeed = [
   {
     email: "The Dead Zone",
     password: "Stephen King",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Lord of the Flies",
     password: "William Golding",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "The Catcher in the Rye",
     password: "J.D. Salinger",
-    cars:[],
-     
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "The Punch Escrow",
     password: "Tal M. Klein",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Harry Potter and the Sorcerer's Stone",
     password: "J.K. Rowling",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Coraline",
     password: "Neil Gaiman",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Code: The Hidden Language of Computer Hardware and Software",
     password: "Charles Petzold",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "The Everything Store: Jeff Bezos and the Age of Amazon",
     password: "Brad Stone",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Total Recall: My Unbelievably True Life Story",
     password: "Arnold Schwarzenegger",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
     password: "Ashlee Vance",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Steve Jobs",
     password: "Walter Isaacson",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Astrophysics for People in a Hurry",
     password: "Neil deGrasse Tyson",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "1984",
     password: "George Orwell",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "Frankenstein",
     password: "Mary Shelley",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   },
   {
     email: "The Great Gatsby",
     password: "F. Scott Fitzgerald",
-    cars:[],
-      
+    cars: [],
+    date: new Date(Date.now())
   },
   {
     email: "Born a Crime: Stories from a South African Childhood",
     password: "Trevor Noah",
-    cars:[],
-      
+    cars: [],
     date: new Date(Date.now())
   }
 ];
+const carSeeed = [{
+  make:"Honda civic ",
+  model:"civic",
+  year:2006,
+},{
+  make:"nissan altima ",
+  model:"altima",
+  year:2020,
+},{
+  make:"Honda",
+  model:"acccord",
+  year:2019,
+}]
+db.Car
+.remove({})
+.then(()=>db.Car.collection.insertMany(carSeeed))
+.then(data=>{
+  console.log(data.result.n+ "records inserted")
+  process.exit(0)
+}).catch(err=>{
+  console.error(err)
+  process.exit(1)
+})
 
-db.User
-  .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+// db.User
+//   .remove({})
+//   .then(() => db.User.collection.insertMany(userSeed))
+//   .then(data => {
+//     console.log(data.result.n + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
