@@ -16,11 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-<<<<<<< HEAD
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/user");
-=======
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roadWise");
->>>>>>> 951f4a42a91768b4372d93865121a11d00f988b1
 
 // Start the API server
 app.listen(PORT, function() {
