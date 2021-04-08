@@ -1,6 +1,6 @@
 import React ,{useState,useEffect}from 'react';
-import LoginForm from "../components/Form/login";
-import SignUpForm from "../components/Form/signupform"
+import LoginForm from "../../components/Form/login";
+import SignUpForm from "../../components/Form/signupform"
 import "./dashboard.css"
 function Dashboard() {
   const [user,setUser] = useState({});
