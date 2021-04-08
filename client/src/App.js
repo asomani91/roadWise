@@ -1,7 +1,7 @@
-import { BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import React from "react";
-import Dashboard from "./pages/Dashboard";
-
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Home from "./pages/Home/Home"
 import Nav from "./components/NavTabs";
 
 
@@ -13,7 +13,14 @@ function App() {
     <Router>
     <div>
       <Nav />
+      <Switch >
+      <Route path="/Dashboard">
       <Dashboard />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+      </Switch>
     </div>
     </Router>
   );
