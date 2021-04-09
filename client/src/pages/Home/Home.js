@@ -17,14 +17,22 @@ const Home = () => (
       </Jumbotron>
       <Cards/>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Contact />
+=======
+  
+>>>>>>> main
 =======
  ankitBranch
       <Contact />
 =======
   
  main
+<<<<<<< HEAD
 >>>>>>> a8c48608b29d850bf67089275cce3d976edd3df6
+=======
+>>>>>>> a31a1decdff8ff69ab0de56a39b0ca6bd8b1a8ef
+>>>>>>> main
     </div>
 );
 
