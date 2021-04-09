@@ -13,15 +13,7 @@ function Cards() {
             
           ></CardImg>
           <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardText>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </CardText>
-            <CardText>
-              <small className=" text-muted">Last updated 3 mins ago</small>
-            </CardText>
+            <CardTitle>Stay Tuned</CardTitle>
           </CardBody>
         </Card>
         <Card>
@@ -31,14 +23,7 @@ function Cards() {
             top
           ></CardImg>
           <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardText>
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </CardText>
-            <CardText>
-              <small className=" text-muted">Last updated 3 mins ago</small>
-            </CardText>
+            <CardTitle>Steer Clear</CardTitle>
           </CardBody>
         </Card>
         <Card>
@@ -48,15 +33,7 @@ function Cards() {
             top
           ></CardImg>
           <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardText>
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </CardText>
-            <CardText>
-              <small className=" text-muted">Last updated 3 mins ago</small>
-            </CardText>
+            <CardTitle>Keep Coasting</CardTitle>
           </CardBody>
         </Card>
       </div>

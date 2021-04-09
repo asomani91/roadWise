@@ -14,8 +14,8 @@ const Home = () => (
           <Button color="primary">Learn More</Button>
         </p>
       </Jumbotron>
-      <Contact />
       <Cards/>
+      <Contact />
     </div>
 );
 
