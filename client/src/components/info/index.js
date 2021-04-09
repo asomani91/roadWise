@@ -1,11 +1,10 @@
 import React from 'react'
 
 function infoSection() {
-    return ( <
-        div >
-
-        <
-        /div>
+    return (
+        <div>
+            
+        </div>
     )
 }
 
