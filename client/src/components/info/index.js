@@ -1,11 +1,15 @@
 import React from 'react'
 
 function infoSection() {
-    return ( <
-        div >
+<<<<<<< HEAD
+    return (
+        <div>
+            
+=======
+    return ( <div>
 
-        <
-        /div>
+>>>>>>> main
+        </div>
     )
 }
 
