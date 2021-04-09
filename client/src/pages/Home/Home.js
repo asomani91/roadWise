@@ -16,7 +16,15 @@ const Home = () => (
         </p>
       </Jumbotron>
       <Cards/>
+<<<<<<< HEAD
   
+=======
+ ankitBranch
+      <Contact />
+=======
+  
+ main
+>>>>>>> a31a1decdff8ff69ab0de56a39b0ca6bd8b1a8ef
     </div>
 );
 

@@ -37,9 +37,19 @@ function Cards() {
           </CardImg > */}
      
           <CardBody>
+<<<<<<< HEAD
             <CardTitle><h1>Keep Coasting</h1></CardTitle>
             
             <Gif/>
+=======
+ ankitBranch
+            <CardTitle>Keep Coasting</CardTitle>
+
+            <CardTitle><h1>Keep Coasting</h1></CardTitle>
+            
+            <Gif/>
+ main
+>>>>>>> a31a1decdff8ff69ab0de56a39b0ca6bd8b1a8ef
           </CardBody>
         </Card>
       </div>
