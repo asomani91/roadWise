@@ -7,21 +7,13 @@ function Cards() {
         <div>
              <div className=" card-deck">
         <Card>
-          <CardImg
-            alt="..."
-            src="https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/alejandro-escamilla.jpg"
-            
-          ></CardImg>
+          <Gif images="wrench.gif"/>
           <CardBody>
             <CardTitle>Stay Tuned</CardTitle>
           </CardBody>
         </Card>
         <Card>
-          <CardImg
-            alt="..."
-            src="https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/alejandro-escamilla.jpg"
-            top
-          ></CardImg>
+         <Gif images="wheel.gif"/>
           <CardBody>
             <CardTitle>Steer Clear</CardTitle>
           </CardBody>
@@ -37,13 +29,9 @@ function Cards() {
           </CardImg > */}
      
           <CardBody>
- 
-            <CardTitle>Keep Coasting</CardTitle>
 
             <CardTitle><h1>Keep Coasting</h1></CardTitle>
-            
-            <Gif/>
- 
+            <Gif images="girl.gif"/>
           </CardBody>
         </Card>
       </div>
