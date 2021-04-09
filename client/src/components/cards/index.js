@@ -37,13 +37,13 @@ function Cards() {
           </CardImg > */}
      
           <CardBody>
- ankitBranch
+ 
             <CardTitle>Keep Coasting</CardTitle>
 
             <CardTitle><h1>Keep Coasting</h1></CardTitle>
             
             <Gif/>
- main
+ 
           </CardBody>
         </Card>
       </div>
