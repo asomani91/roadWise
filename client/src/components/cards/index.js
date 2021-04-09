@@ -37,6 +37,8 @@ function Cards() {
           </CardImg > */}
      
           <CardBody>
+            <CardTitle>Keep Coasting</CardTitle>
+
             <CardTitle><h1>Keep Coasting</h1></CardTitle>
             
             <Gif/>
