@@ -16,11 +16,7 @@ const Home = () => (
         </p>
       </Jumbotron>
       <Cards/>
- ankitBranch
       <Contact />
-=======
-  
- main
     </div>
 );
 

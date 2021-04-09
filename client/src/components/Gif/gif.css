@@ -1,9 +1,17 @@
 #gif{
 border-radius: 10px;
-background-image: url("../../images/girl.gif");
+/* background-image: url("../../images/girl.gif"); */
 width: 100%;
 height: 60%;
 /* background-repeat: repeat-y; */
 background-size: cover;
 margin-top: 4rem;
+}
+
+#card-image{
+    display:block;
+    width:100%;
+    height:50%;
+    background-size: cover;
+
 }
