@@ -2,6 +2,7 @@ import React from "react";
 import {Jumbotron,Button} from "reactstrap";
 import "../Home/home.css"
 import Contact from "../Contact/Contact"
+import Cards from "../../components/cards";
 const Home = () => (
   <div >
       <Jumbotron id="jumbo" >
@@ -14,6 +15,7 @@ const Home = () => (
         </p>
       </Jumbotron>
       <Contact />
+      <Cards/>
     </div>
 );
 
