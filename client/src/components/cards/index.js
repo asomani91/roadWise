@@ -37,13 +37,9 @@ function Cards() {
           </CardImg > */}
      
           <CardBody>
-<<<<<<< HEAD
-            <CardTitle>Keep Coasting</CardTitle>
-=======
             <CardTitle><h1>Keep Coasting</h1></CardTitle>
             
             <Gif/>
->>>>>>> 92c5c931fd8b0dcbf1a78d4dfa705a94bdae39ff
           </CardBody>
         </Card>
       </div>
