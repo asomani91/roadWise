@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
-
+import Gif from "../Gif/Gif"
 
 function Cards() {
     return (
@@ -27,13 +27,23 @@ function Cards() {
           </CardBody>
         </Card>
         <Card>
-          <CardImg
+          {/* <CardImg
             alt="..."
-            src="https://demos.creative-tim.com/argon-design-system-pro/assets/img/faces/alejandro-escamilla.jpg"
+             src="../images/girl.gif"
             top
-          ></CardImg>
+       
+          >
+           
+          </CardImg > */}
+     
           <CardBody>
+<<<<<<< HEAD
             <CardTitle>Keep Coasting</CardTitle>
+=======
+            <CardTitle><h1>Keep Coasting</h1></CardTitle>
+            
+            <Gif/>
+>>>>>>> 92c5c931fd8b0dcbf1a78d4dfa705a94bdae39ff
           </CardBody>
         </Card>
       </div>
@@ -41,4 +51,4 @@ function Cards() {
     )
 }
 
-export default Cards
+export default Cards;

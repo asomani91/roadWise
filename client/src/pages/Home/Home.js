@@ -3,6 +3,7 @@ import {Jumbotron,Button} from "reactstrap";
 import "../Home/home.css"
 import Contact from "../Contact/Contact"
 import Cards from "../../components/cards";
+import Gif from "../../components/Gif/Gif"
 const Home = () => (
   <div >
       <Jumbotron id="jumbo" >
@@ -15,7 +16,11 @@ const Home = () => (
         </p>
       </Jumbotron>
       <Cards/>
+<<<<<<< HEAD
       <Contact />
+=======
+  
+>>>>>>> 92c5c931fd8b0dcbf1a78d4dfa705a94bdae39ff
     </div>
 );
 
