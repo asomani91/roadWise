@@ -2,7 +2,7 @@ import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
-import Nav from "./components/NavTabs";
+import Nav from "./components/navBar/nav"
 import FooterContent from "./components/Footer/FooterContent";
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
     <div>
-      <Nav />
+     <Nav/>
       <Switch >
       <Route path="/Dashboard">
       <Dashboard />

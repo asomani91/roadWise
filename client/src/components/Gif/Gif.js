@@ -1,5 +1,4 @@
 import React from 'react';
-import { Title } from '../Footer/Footer.styles';
 import {CardsContainer,CardWrapper,Card,CardImg, CardTitle}from "./gif.styles"
 
 const Gif = ({images,Title}) =>{
