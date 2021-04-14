@@ -3,6 +3,7 @@ import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
 import Nav from "./components/NavTabs";
+import FooterContent from "./components/Footer/FooterContent";
 
 
 // The app will not render correctly until you setup a Route component.
@@ -22,6 +23,7 @@ function App() {
       </Route>
       </Switch>
     </div>
+    <FooterContent/>
     </Router>
   );
 }

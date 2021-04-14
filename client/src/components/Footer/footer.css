@@ -1,0 +1,12 @@
+#footer {
+    height :100px;
+    background-color: blue;
+    position: relative;
+}
+.smoothscroll{
+    position: absolute;
+    width:100%;
+}
+.span {
+    font-family: 'Yellowtail', cursive;
+}
