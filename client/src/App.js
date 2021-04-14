@@ -2,8 +2,16 @@ import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
+<<<<<<< HEAD
 import Nav from "./components/navBar/nav"
+=======
+import Nav from "./components/NavTabs";
+<<<<<<< HEAD
+>>>>>>> newBranch
 import FooterContent from "./components/Footer/FooterContent";
+=======
+import Footer from "./components/Footer/FooterContent";
+>>>>>>> main
 
 
 // The app will not render correctly until you setup a Route component.
