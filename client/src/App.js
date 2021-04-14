@@ -3,7 +3,7 @@ import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
 import Nav from "./components/NavTabs";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/FooterContent";
 
 
 // The app will not render correctly until you setup a Route component.
