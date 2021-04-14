@@ -1,12 +1,12 @@
 #footer {
     height :100px;
-    background-color: #6593a3;
+    background-color: blue;
     position: relative;
-
 }
-
-h5 {
+.smoothscroll{
+    position: absolute;
+    width:100%;
+}
+.span {
     font-family: 'Yellowtail', cursive;
-    text-align: center;
-    color: white;
 }
