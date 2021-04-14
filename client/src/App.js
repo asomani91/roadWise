@@ -3,7 +3,11 @@ import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
 import Nav from "./components/NavTabs";
+<<<<<<< HEAD
 import FooterContent from "./components/Footer/FooterContent";
+=======
+import Footer from "./components/Footer/FooterContent";
+>>>>>>> main
 
 
 // The app will not render correctly until you setup a Route component.
