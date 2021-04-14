@@ -1,11 +1,16 @@
 import React from 'react';
-import "../Gif/gif.css"
+import {CardsContainer,CardWrapper,Card,CardImg, CardTitle}from "./gif.styles"
 
-const Gif = (props) =>{
-console.log(props);
-return (<div id="gif">
-    <img id="card-image" src={require(`../../images/${props.images}`)}/>
-</div>
+const Gif = ({images,Title}) =>{
+return (
+    <CardsContainer>
+        <CardWrapper>
+            <Card>
+                <CardTitle>{Title}</CardTitle>
+                <CardImg  src={require(`../../images/${images}`)}/>
+            </Card>
+        </CardWrapper>
+    </CardsContainer>
 )
 
 

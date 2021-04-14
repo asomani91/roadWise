@@ -1,41 +1,15 @@
 import React from 'react'
 import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
-import Gif from "../Gif/Gif"
+import Gif from "../Gif/Gif";
+import {Section}from "./cards.styles"
 
 function Cards() {
     return (
-        <div>
-             <div className=" card-deck">
-        <Card>
-          <Gif images="wrench.gif"/>
-          <CardBody>
-            <CardTitle>Stay Tuned</CardTitle>
-          </CardBody>
-        </Card>
-        <Card>
-         <Gif images="wheel.gif"/>
-          <CardBody>
-            <CardTitle>Steer Clear</CardTitle>
-          </CardBody>
-        </Card>
-        <Card>
-          {/* <CardImg
-            alt="..."
-             src="../images/girl.gif"
-            top
-       
-          >
-           
-          </CardImg > */}
-     
-          <CardBody>
-
-            <CardTitle><h1>Keep Coasting</h1></CardTitle>
-            <Gif images="girl.gif"/>
-          </CardBody>
-        </Card>
-      </div>
-        </div>
+      <Section>
+          <Gif Title={"Keep Coasting."}images="wrench.gif"/>
+         <Gif Title={"Stay Tuned."}images="wheel.gif"/>
+          <Gif Title={"Steer Clear."}images="girl.gif"/>
+      </Section>
     )
 }
 
