@@ -1,27 +1,49 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt")
-const SALT_WORK_FACTOR = 5 ; 
-const userSchema = new Schema({
-  email: { type: String, required: true },
-  password: { type: String, required: true },
-  cars:[
-    {type:mongoose.Schema.Types.ObjectId,ref:'Cars'}
-  ],
-  date: { type: Date, default: Date.now }
+const bcrypt = require("bcryptjs");
+
+const UserSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    cars: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Cars'
+    }]
 });
-// haseshs password 
-userSchema.pre("save",function(next){
-  if(!this.isModified('password'))return next();
-bcrypt.genSalt(SALT_WORK_FACTOR,function(err,salt){
-  if(err) return next(err);
-  bcrypt.hash(this.password,salt,function(err,hash){
-    if(err)return next(err)
-    this.password = hash;
-    next();
-  })
+
+
+// hashes password 
+UserSchema.methods = {
+        checkPassword: function(inputPassword) {
+            return bcrypt.compareSync(inputPassword, this.password)
+        },
+        hashPassword: plainTextPassword => {
+            return bcrypt.hashSync(plainTextPassword, 10)
+        }
+    }
+    // refactor code to work using bcrpyt in mongoose
+UserSchema.pre("save", function(next) {
+    console.log("UserSchema.pre('save'): ", this)
+    if (!this.password) {
+        console.log("no password!")
+        next()
+    } else {
+        console.log("pre saved");
+        this.password = this.hashPassword(this.password)
+        next()
+    }
 })
-})
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("User", UserSchema);
 
 module.exports = User;

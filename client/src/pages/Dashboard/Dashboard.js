@@ -2,34 +2,30 @@ import React, { useState, useEffect } from 'react';
 import Api from "../../utils/API";
 import LoginForm from "../../components/Form/login";
 import "./dashboard.css";
-import Cars from "../../components/Cars/cars"
+import Cars from "../../components/Cars/Cars"
+
+
 function Dashboard() {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState({});
   const [car, setCars] = useState([]);
 
-
-
-  useEffect(() => {
-    HandleAllCars();
-    console.log(car);
-  }, []);
-
-  function HandleAllCars() {
-
+  function getAllCars() {
+    console.log(car)
     Api.allCars()
       .then(({ data }) => {
         setCars(data);
-        console.log(car);
       }).catch(err => console.log(err))
   }
+
+  useEffect(() => {
+    getAllCars();
+  }, []);
+
 
   return (
 
     <div className="form">
-
-      {
-        (user ? <LoginForm /> :
-          <Cars />)}
+      {car ? <Cars Cars={car} /> : "no Cars Found "}
     </div>
 
   )
