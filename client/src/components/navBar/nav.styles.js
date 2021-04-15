@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const NavContainer = styled.nav `
 
-background: #fff;
+background: #000;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -63,12 +63,14 @@ height: 80px;
 
 export const NavLinks = styled(Link)
 `
-  color: #000;
+  color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-size:25px;
+  padding:28px;
 
 &:hover {
   border-bottom: 1px solid blue;

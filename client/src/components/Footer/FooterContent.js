@@ -1,5 +1,7 @@
 import React from 'react'
 import Footer from './index'
+import Tech from "../../pages/Technician/Technician"
+
 function FooterContent() {
     return (
         <Footer>
@@ -27,7 +29,7 @@ function FooterContent() {
             </Footer.Column>
             <Footer.Column>
             <Footer.Title>Social</Footer.Title>
-                <Footer.Link href="#"> </Footer.Link>
+            <Tech/>
                 <Footer.Link href="#"></Footer.Link>
                 <Footer.Link href="#"></Footer.Link>
                 <Footer.Link href="#"></Footer.Link>
