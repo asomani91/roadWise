@@ -2,31 +2,28 @@
     box-sizing: border-box;
 }
 
-
-
 #loginForm {
     /* display: flex; */
     flex-direction: column;
-    width: 20%;
-    border:2px solid black;
+    width: 50%;
+    border: 2px solid black;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
     margin-left: 50px;
 }
-#box{
-    display: flex;
-/*   
-   padding: 50px; */
-   width: 100%;
-   
-   text-align: center;
-    margin-top: 80px;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 50px;
-}
 
+#box {
+    display: flex;
+    /*   
+   padding: 50px; */
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 
 
 /* .form{
@@ -40,27 +37,35 @@
     
     
 } */
-.signupContainer{
-   
-margin: 0 auto;
-justify-content: center;
-display: flex;
-align-items: center;
+
+.signupContainer {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
-
-.signUp{
-  
+.signUp {
     flex-direction: column;
-    width: 20%;
-    border:2px solid black;
+    width: 50%;
+    border: 2px solid black;
     padding: 50px;
     margin-left: 50px;
     border-radius: 20px;
     /* justify-content: center;
     align-items: center; */
-    
 }
+
+.check {
+    display: flex;
+}
+
+.forgot-password {
+    display: flex;
+    margin-top: 20px;
+}
+
+
 /* 
 body {
     min-height: 100vh;

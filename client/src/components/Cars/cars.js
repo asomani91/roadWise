@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {
+    useState,
+    useEffect
+} from 'react'
+import API from "../../utils/API"
+const Cars = ({ Cars }) => {
+    // const Car = [car, setCar] = useState({})
 
-const Cars = ({Cars}) => {
-    console.log("cars",Cars.data)
-    return ( 
-    <>
-{Cars}
- </>
-    )
+    return (
+        <> {
+            Cars
+        } cars
+        </>)
 }
 
 export default Cars

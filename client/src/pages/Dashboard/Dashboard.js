@@ -1,54 +1,37 @@
-import React ,{useState,useEffect}from 'react';
-import axios from "axios"
+import React, { useState, useEffect } from 'react';
 import Api from "../../utils/API";
 import LoginForm from "../../components/Form/login";
-<<<<<<< HEAD
-import SignUpForm from "../../components/Form/signupform"
+import "./dashboard.css";
 import Cars from "../../components/Cars/cars"
-=======
-
->>>>>>> main
-import "./dashboard.css"
 function Dashboard() {
-  const [user,setUser] = useState({});
-  const [cars,setCars] = useState([]);
+  const [user, setUser] = useState(false);
+  const [car, setCars] = useState([]);
 
-const usernameChange = (event,newValue) => this.setState({username:newValue});
-const HandleAllCars = ()=>{
-    
-  Api.allCars()
-   .then(res=>{
-     setCars(res)
-   }).catch(err =>console.log(err))
 
-}
-  
-useEffect(() => {
-HandleAllCars()
-}, []);
+
+  useEffect(() => {
+    HandleAllCars();
+    console.log(car);
+  }, []);
+
+  function HandleAllCars() {
+
+    Api.allCars()
+      .then(({ data }) => {
+        setCars(data);
+        console.log(car);
+      }).catch(err => console.log(err))
+  }
 
   return (
-   
-    <div classNames="form">
-<<<<<<< HEAD
-      {/* <LoginForm />
-      <SignUpForm/> */}
-      <Cars Cars={cars}/>
-    </div>
-   
-=======
-     
-        
-      
 
-      <LoginForm  />
-      
-     
+    <div className="form">
 
-      </div>
+      {
+        (user ? <LoginForm /> :
+          <Cars />)}
     </div>
-  
->>>>>>> main
+
   )
 }
 
