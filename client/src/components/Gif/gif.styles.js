@@ -20,7 +20,7 @@ export const Card = styled.div `
   line-height: 2;
 border:solid 0.5px #333;
 border-radius:5px;
-padding:30px;
+padding:0;
 `;
 export const CardImg = styled.img `
   height: 300px;

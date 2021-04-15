@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { Button } from './Button';
-import {NavContainer,NavItem,NavLinks,NavWrapper,NavMenu}from './nav.styles';
+import { NavContainer, NavItem, NavLinks, NavWrapper, NavMenu } from './nav.styles';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -19,26 +19,27 @@ function Navbar() {
 
     useEffect(() => {
         showButton();
+
     }, []);
 
     window.addEventListener('resize', showButton);
 
     return (
-    <NavContainer>
-        <NavWrapper>
-            <NavMenu>
-                <NavItem>
-                    <NavLinks>Home</NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks>About Us</NavLinks>
-                </NavItem>
-                <NavItem>
-                    <NavLinks>Dashboard</NavLinks>
-                </NavItem>
-            </NavMenu>
-        </NavWrapper>
-    </NavContainer>);
+        <NavContainer>
+            <NavWrapper>
+                <NavMenu>
+                    <NavItem>
+                        <NavLinks to="Home">Home</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="About">About Us</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="Dashboard">Dashboard</NavLinks>
+                    </NavItem>
+                </NavMenu>
+            </NavWrapper>
+        </NavContainer>);
 }
 
 export default Navbar;

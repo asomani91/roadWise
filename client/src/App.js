@@ -1,17 +1,9 @@
-import { BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
-<<<<<<< HEAD
-import Nav from "./components/navBar/nav"
-=======
-import Nav from "./components/NavTabs";
-<<<<<<< HEAD
->>>>>>> newBranch
+import Nav from "./components/navBar/nav";
 import FooterContent from "./components/Footer/FooterContent";
-=======
-import Footer from "./components/Footer/FooterContent";
->>>>>>> main
 
 
 // The app will not render correctly until you setup a Route component.
@@ -20,18 +12,18 @@ import Footer from "./components/Footer/FooterContent";
 function App() {
   return (
     <Router>
-    <div>
-     <Nav/>
-      <Switch >
-      <Route path="/Dashboard">
-      <Dashboard />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-      </Switch>
-    </div>
-    <FooterContent/>
+      <div>
+        <Nav />
+        <Switch >
+          <Route path="/Dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+      <FooterContent />
     </Router>
   );
 }
