@@ -4,12 +4,14 @@ const carRoutes = require("./cars")
 const userRoutes = require("./user");
 const signupRoutes = require("./signup");
 const passport = require("../../passport/");
+const maintenanceRoutes = require("./addMaintenance");
 
 
 router.use("/dashboard", dashboardRoutes);
 router.use("/cars", carRoutes);
 router.use("/signup", signupRoutes);
 router.use("/user", userRoutes);
+router.use("/maintenance", maintenanceRoutes);
 
 // Matches: /api/login
 router.post("/login", passport.authenticate("local"), (req, res) => {

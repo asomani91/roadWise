@@ -37,6 +37,9 @@ function Navbar() {
                     <NavItem>
                         <NavLinks to="Dashboard">Dashboard</NavLinks>
                     </NavItem>
+                    <NavItem>
+                        <NavLinks to="AddMaintenance">Add Maintenance</NavLinks>
+                    </NavItem>
                 </NavMenu>
             </NavWrapper>
         </NavContainer>);
