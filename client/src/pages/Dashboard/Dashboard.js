@@ -16,16 +16,31 @@ function Dashboard() {
         setCars(data);
       }).catch(err => console.log(err))
   }
+   
 
   useEffect(() => {
-    getAllCars();
+    Api.checklogin()
+    .then((data)=>{
+      console.log("data",data);
+      if(data.data === "Not logged in yet!" ) {
+        console.log("redirect to login ");
+        window.location.replace("/login")
+      } else{
+        setUser(data.data)
+        getAllCars();
+      }
+
+    })
+    
+
   }, []);
 
-console.log(user===null);
+console.log(user);
   return (
 
     <div className="form">
-      {!user ? <Cars Cars={car} /> : <LoginForm/>}
+   
+      {user ?  <Cars Cars={car} /> : <LoginForm/>}
     </div>
 
   )

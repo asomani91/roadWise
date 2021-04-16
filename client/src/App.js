@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home"
+import Logout from "./pages/Logout"
 import Nav from "./components/navBar/nav";
 import FooterContent from "./components/Footer/FooterContent";
 
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/">
             <Home />
+          </Route>
+          <Route path="/logout">
+            <Logout />
           </Route>
         </Switch>
       </div>
