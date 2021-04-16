@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Api from "../../utils/API";
 import LoginForm from "../../components/Form/login";
 import "./dashboard.css";
-import Cars from "../../components/Cars/Cars"
+import Cars from "../../components/Cars/cars"
 
 
 function Dashboard() {
@@ -21,11 +21,11 @@ function Dashboard() {
     getAllCars();
   }, []);
 
-
+console.log(user===null);
   return (
 
     <div className="form">
-      {car ? <Cars Cars={car} /> : "no Cars Found "}
+      {!user ? <Cars Cars={car} /> : <LoginForm/>}
     </div>
 
   )

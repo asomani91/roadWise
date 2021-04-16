@@ -12,12 +12,32 @@ export const List = styled.ul `
 
 `;
 export const ListItem = styled.li `
-    height:100px;
-    border:solid red 3px;
-    font-size:20px;
-    list-style-type:none;
-    padding:9rem;
-    border-radius:5px;
-    box-shadow: 5px 10px #888888;
+      
+      list-style-type:none;
+
 
 `;
+
+export const TechContainer = styled.div `
+display:flex;
+justify-content:center;
+margin-bottom:5rem;
+
+
+`;
+export const Heading = styled.div `
+    padding:20px;
+    background:red;
+
+`
+export const TechBtn = styled.button `
+    height:100px;
+    border:solid red 3px; 
+    padding:9rem;
+    border-radius:5px;      
+    background:red;
+    font-size:20px;
+    outline:none;
+    box-shadow: 5px 10px #888888;
+
+`
