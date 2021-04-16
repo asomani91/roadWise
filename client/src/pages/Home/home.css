@@ -12,3 +12,8 @@ opacity: 100;
 background-image: url("../../images/jasper-geys-NyRe1Mj1pm4-unsplash.jpg");
 }
 /* linear-gradient(rgba(0,0,0,0.3)rgba(0,0,0,0.3,)), */
+
+
+.lead {
+    padding-bottom: 150px;
+}
