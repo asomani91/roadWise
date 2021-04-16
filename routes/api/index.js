@@ -3,7 +3,7 @@ const dashboardRoutes = require("./Dashboard");
 const carRoutes = require("./cars")
 const userRoutes = require("./user");
 const signupRoutes = require("./signup");
-const passport = require("../../passport");
+const passport = require("../../passport/");
 
 
 router.use("/dashboard", dashboardRoutes);
@@ -19,7 +19,7 @@ router.post("/login", passport.authenticate("local"), (req, res) => {
         name: req.user.name,
         email: req.user.email
     };
-    req.user = userInfo;
+
     res.json(userInfo);
 });
 
