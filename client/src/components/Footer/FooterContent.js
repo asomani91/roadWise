@@ -1,5 +1,7 @@
 import React from 'react'
 import Footer from './index'
+import Modal from "../Modal/"
+
 function FooterContent() {
     return (
         <Footer>
@@ -26,11 +28,9 @@ function FooterContent() {
                 <Footer.Link href="#">Support</Footer.Link>
             </Footer.Column>
             <Footer.Column>
-            <Footer.Title>Social</Footer.Title>
-                <Footer.Link href="#"> </Footer.Link>
-                <Footer.Link href="#"></Footer.Link>
-                <Footer.Link href="#"></Footer.Link>
-                <Footer.Link href="#"></Footer.Link>
+            <Footer.Title>Need Help</Footer.Title>
+            <Modal name={"nafffme"}/>
+              
             </Footer.Column>
         </Footer.Row>
         </Footer.Wrapper>
