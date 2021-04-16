@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './index'
-import Tech from "../../pages/Technician/Technician"
+import Modal from "../Modal/"
 
 function FooterContent() {
     return (
@@ -28,11 +28,9 @@ function FooterContent() {
                 <Footer.Link href="#">Support</Footer.Link>
             </Footer.Column>
             <Footer.Column>
-            <Footer.Title>Social</Footer.Title>
-            <Tech/>
-                <Footer.Link href="#"></Footer.Link>
-                <Footer.Link href="#"></Footer.Link>
-                <Footer.Link href="#"></Footer.Link>
+            <Footer.Title>Need Help</Footer.Title>
+            <Modal name={"nafffme"}/>
+              
             </Footer.Column>
         </Footer.Row>
         </Footer.Wrapper>
