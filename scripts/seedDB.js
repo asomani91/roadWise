@@ -128,6 +128,27 @@ db.Car
   process.exit(1)
 })
 
+const AddMaintenanceSeed = [
+  {
+    type: "planned",
+    description: "oil change",
+    model: "accord",
+    make: "Honda",
+    year: 2019,
+    mileage: 50,000,
+    date: Date.now()
+  },
+  {
+    type: "planned",
+    description: "oil change",
+    model: "civic",
+    make: "Honda",
+    year: 2006,
+    mileage: "75,000",
+    date: Date.now()
+
+  }
+];
 // db.User
 //   .remove({})
 //   .then(() => db.User.collection.insertMany(userSeed))
