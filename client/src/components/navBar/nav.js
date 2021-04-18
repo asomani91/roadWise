@@ -38,7 +38,7 @@ function Navbar() {
                         <NavLinks to="Dashboard">Dashboard</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <a href="/api/logout">Logout</a>
+                        <NavLinks to="/logout">logout</NavLinks>
                     </NavItem>
                 </NavMenu>
             </NavWrapper>
