@@ -1,48 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 // import { Button } from './Button';
-import { NavContainer, NavItem, NavLinks, NavWrapper, NavMenu } from './nav.styles';
+import {
+  NavContainer,
+  NavItem,
+  NavLinks,
+  NavWrapper,
+  NavMenu,
+} from "./nav.styles";
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    };
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
 
-    useEffect(() => {
-        showButton();
+  useEffect(() => {
+    showButton();
+  }, []);
 
-    }, []);
+  window.addEventListener("resize", showButton);
 
-    window.addEventListener('resize', showButton);
+  return (
+    <NavContainer>
+      <NavWrapper>
+        <NavMenu>
+          <NavItem>
+            <NavLinks to="Home"> Home </NavLinks>
+          </NavItem>
 
-    return (
-        <NavContainer>
-            <NavWrapper>
-                <NavMenu>
-                    <NavItem>
-                        <NavLinks to="Home">Home</NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to="About">About Us</NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to="Dashboard">Dashboard</NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks to="/logout">logout</NavLinks>
-                    </NavItem>
-                </NavMenu>
-            </NavWrapper>
-        </NavContainer>);
+          <NavItem>
+            <NavLinks to="Dashboard"> Dashboard </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="Login"> Login </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks to="Signup"> Signup </NavLinks>
+          </NavItem>
+        </NavMenu>
+      </NavWrapper>
+    </NavContainer>
+  );
 }
 
 export default Navbar;

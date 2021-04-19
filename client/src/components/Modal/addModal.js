@@ -13,15 +13,13 @@ import {
   FormGroup,
   Label,
 } from "./modal.style";
-export const Modal = ({ showModal, setShowModal, data }) => {
+import API from "../../utils/API";
+
+export const AddModal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();
   const close = useRef();
   const [formObject, setFormObject] = useState({});
 
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value });
-  }
   const animation = useSpring({
     config: {
       duration: 250,
@@ -29,7 +27,27 @@ export const Modal = ({ showModal, setShowModal, data }) => {
     opacity: showModal ? 1 : 0,
     transform: showModal ? `translateY(0%)` : `translateY(-100%)`,
   });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formObject);
 
+    const userData = {
+      make: formObject.make,
+      model: formObject.model,
+      year: formObject.year,
+    };
+    console.log(userData);
+    API.createCars(userData)
+      .then((data) => {
+        console.log("car added ");
+        console.log(data.data);
+      })
+      .catch((err) => console.log(err));
+  };
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormObject({ ...formObject, [name]: value });
+  }
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
       setShowModal(false);
@@ -50,7 +68,6 @@ export const Modal = ({ showModal, setShowModal, data }) => {
     document.addEventListener("keydown", keyPress);
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
-  console.log("object");
   return (
     <>
       {showModal ? (
@@ -62,33 +79,34 @@ export const Modal = ({ showModal, setShowModal, data }) => {
                 <FormGroup>
                   <Label>Make</Label>
                   <Input
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
+                    type="text"
+                    name="make"
+                    id="make"
                     onChange={handleInputChange}
-                    placeholder="myemail@email.com"
-                  />
+                    placeholder="make"
+                  />{" "}
                 </FormGroup>
                 <FormGroup>
                   <Label>Model</Label>
                   <Input
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
+                    type="text"
+                    name="model"
+                    id="model"
                     onChange={handleInputChange}
-                    placeholder="myemail@email.com"
+                    placeholder="model"
                   />{" "}
                 </FormGroup>
                 <FormGroup>
                   <Label>Year</Label>
                   <Input
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
+                    type="text"
+                    name="year"
+                    id="year"
                     onChange={handleInputChange}
-                    placeholder="myemail@email.com"
+                    placeholder="year"
                   />{" "}
                 </FormGroup>
+                <button onClick={handleSubmit}> submit</button>
               </ModalContent>
               <CloseModalButton
                 aria-label="Close modal"
@@ -102,4 +120,4 @@ export const Modal = ({ showModal, setShowModal, data }) => {
   );
 };
 
-export default Modal;
+export default AddModal;
