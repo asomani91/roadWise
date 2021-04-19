@@ -29,14 +29,12 @@ export const AddModal = ({ showModal, setShowModal }) => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formObject);
 
     const userData = {
       make: formObject.make,
       model: formObject.model,
       year: formObject.year,
     };
-    console.log(userData);
     API.createCars(userData)
       .then((data) => {
         console.log("car added ");
@@ -84,7 +82,7 @@ export const AddModal = ({ showModal, setShowModal }) => {
                     id="make"
                     onChange={handleInputChange}
                     placeholder="make"
-                  />{" "}
+                  />
                 </FormGroup>
                 <FormGroup>
                   <Label>Model</Label>
@@ -94,7 +92,7 @@ export const AddModal = ({ showModal, setShowModal }) => {
                     id="model"
                     onChange={handleInputChange}
                     placeholder="model"
-                  />{" "}
+                  />
                 </FormGroup>
                 <FormGroup>
                   <Label>Year</Label>
@@ -104,9 +102,11 @@ export const AddModal = ({ showModal, setShowModal }) => {
                     id="year"
                     onChange={handleInputChange}
                     placeholder="year"
-                  />{" "}
+                  />
                 </FormGroup>
-                <button onClick={handleSubmit}> submit</button>
+                <FormGroup>
+                  <button onClick={handleSubmit}> submit</button>
+                </FormGroup>
               </ModalContent>
               <CloseModalButton
                 aria-label="Close modal"

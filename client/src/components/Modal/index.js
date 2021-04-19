@@ -67,6 +67,7 @@ export const Modal = ({ showModal, setShowModal, data }) => {
                     id="exampleEmail"
                     onChange={handleInputChange}
                     placeholder="myemail@email.com"
+                    value={data.make}
                   />
                 </FormGroup>
                 <FormGroup>
@@ -77,6 +78,7 @@ export const Modal = ({ showModal, setShowModal, data }) => {
                     id="exampleEmail"
                     onChange={handleInputChange}
                     placeholder="myemail@email.com"
+                    value={data.value}
                   />{" "}
                 </FormGroup>
                 <FormGroup>
@@ -87,6 +89,7 @@ export const Modal = ({ showModal, setShowModal, data }) => {
                     id="exampleEmail"
                     onChange={handleInputChange}
                     placeholder="myemail@email.com"
+                    value={data.year}
                   />{" "}
                 </FormGroup>
               </ModalContent>
